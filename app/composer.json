@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\Logger\\": "src/"
+        }
+    },
+    "require": {
+        "psr/log": "^3.0"
+    }
+}
