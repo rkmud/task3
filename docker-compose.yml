@@ -1,0 +1,13 @@
+services:
+  php: 
+    build: .
+    volumes:
+      - ./app:/var/www/html 
+    ports: 
+      - "80:80"
+    networks: 
+      - net
+
+networks: 
+  net:
+    driver: bridge
