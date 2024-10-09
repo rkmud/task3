@@ -1,14 +1,14 @@
 <?php
 
-require 'vendor/autoload.php';
-require './src/Logger.php';
+require 'vendor/autoload.php'; 
+require './Mail/EmailSender.php';
 
-use App\Logger\Logger;
+use App\Mail\EmailSender;
 
-$fileLogger = new Logger('file', 'application.log');
-$fileLogger->info('User {username} created.', ['username' => 'qwerty']);
+$emailSender = new EmailSender();
 
-$consoleLogger = new Logger();
-$consoleLogger->info('User {username} created.', ['username' => 'qwerty']);
-$consoleLogger->debug('This is a debug message.');
-$consoleLogger->error('An error occurred!');
+$to = 'example@gmail.com'; 
+$subject = 'Reminder';
+$messageType = 'reminder'; 
+
+$emailSender->send($to, $subject, $messageType);

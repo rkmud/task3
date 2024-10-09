@@ -10,10 +10,11 @@ class ComposerStaticInit260e327c158a3f56703271298bfecfc1
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'A' => 
         array (
-            'App\\Logger\\' => 11,
+            'App\\' => 4,
         ),
     );
 
@@ -22,9 +23,13 @@ class ComposerStaticInit260e327c158a3f56703271298bfecfc1
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'App\\Logger\\' => 
+        'PHPMailer\\PHPMailer\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/path/to/App',
         ),
     );
 
