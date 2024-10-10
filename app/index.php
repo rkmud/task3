@@ -3,12 +3,20 @@
 require 'vendor/autoload.php';
 require './Logger/Logger.php';
 
-use App\Logger\Logger;
+use Animals\Cat;
+use Animals\Dog;
+use Animals\Bird;
 
-$fileLogger = new Logger('file', 'application.log');
-$fileLogger->info('User {username} created.', ['username' => 'qwerty']);
+$cat = new Cat();
+$dog = new Dog();
+$bird = new Bird();
 
-$consoleLogger = new Logger();
-$consoleLogger->info('User {username} created.', ['username' => 'qwerty']);
-$consoleLogger->debug('This is a debug message.');
-$consoleLogger->error('An error occurred!');
+echo $cat->makeSound() . "<br>";
+echo $dog->makeSound() . "<br>";
+echo $bird->makeSound() . "<br>";
+echo $cat->eat() . "<br>";
+echo $dog->eat() . "<br>";
+echo $bird->eat() . "<br>";
+echo $cat->sleep() . "<br>";
+echo $dog->sleep() . "<br>";
+echo $bird->sleep() . "<br>";
