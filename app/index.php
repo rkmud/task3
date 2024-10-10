@@ -1,7 +1,7 @@
 <?php
 
 require 'vendor/autoload.php';
-require './src/Logger.php';
+require './Logger/Logger.php';
 
 use App\Logger\Logger;
 
