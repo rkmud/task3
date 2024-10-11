@@ -1,8 +1,10 @@
 <?php
 
-require_once './class/Cat.php';
-require_once './class/Bird.php';
-require_once './class/Dog.php';
+declare(strict_types=1);
+
+require_once('./class/Cat.php');
+require_once('./class/Dog.php');
+require_once('./class/Bird.php');
 
 use Animals\Cat;
 use Animals\Dog;
