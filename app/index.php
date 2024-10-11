@@ -5,7 +5,7 @@ require './Logger/Logger.php';
 
 use App\Logger\Logger;
 
-$fileLogger = new Logger('file', 'application.log');
+$fileLogger = new Logger('file', 'appplication.log');
 $fileLogger->info('User {username} created.', ['username' => 'qwerty']);
 
 $consoleLogger = new Logger();
