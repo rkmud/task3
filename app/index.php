@@ -2,12 +2,16 @@
 
 require 'vendor/autoload.php'; 
 require './Mail/EmailSender.php';
+require './Logger/Logger.php';
 
 use App\Mail\EmailSender;
+use App\Logger\Logger;
 
-$emailSender = new EmailSender();
+$logger = new Logger();
 
-$to = 'example@gmail.com'; 
+$emailSender = new EmailSender($logger);
+
+$to = 'ustkorbut@gmail.com'; 
 $subject = 'Reminder';
 $messageType = 'reminder'; 
 
