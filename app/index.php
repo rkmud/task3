@@ -1,23 +1,18 @@
 <?php
 
-require_once './class/Cat.php';
-require_once './class/Bird.php';
-require_once './class/Dog.php';
+require 'vendor/autoload.php'; 
+require './Mail/EmailSender.php';
+require './Logger/Logger.php';
 
-use Animals\Cat;
-use Animals\Dog;
-use Animals\Bird;
+use App\Mail\EmailSender;
+use App\Logger\Logger;
 
-$cat = new Cat();
-$dog = new Dog();
-$bird = new Bird();
+$logger = new Logger();
 
-echo $cat->makeSound() . "<br>";
-echo $dog->makeSound() . "<br>";
-echo $bird->makeSound() . "<br>";
-echo $cat->eat() . "<br>";
-echo $dog->eat() . "<br>";
-echo $bird->eat() . "<br>";
-echo $cat->sleep() . "<br>";
-echo $dog->sleep() . "<br>";
-echo $bird->sleep() . "<br>";
+$emailSender = new EmailSender($logger);
+
+$to = 'ustkorbut@gmail.com'; 
+$subject = 'Reminder';
+$messageType = 'reminder'; 
+
+$emailSender->send($to, $subject, $messageType);
